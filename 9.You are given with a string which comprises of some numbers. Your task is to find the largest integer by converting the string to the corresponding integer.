@@ -1,0 +1,46 @@
+You are given with a string which comprises of some numbers. Your task is to find the largest integer by converting the string to the corresponding integer.
+
+Input Description:
+First line contains n denoting number of Test Cases. The first and only Line of testcase has the string
+
+Output Description:
+Print the largest number
+
+Sample Input :
+ I was born on 12 october 1998.
+Sample Output :
+1998
+
+m = input()
+
+res = ""
+
+a = len(m)
+
+for i in range(0,a):
+    
+    if m[i]!='.':
+        
+        res = res+m[i]
+        
+n = res.split(" ")
+
+int_lst=[]
+
+for i in n:
+
+ if i.isdigit()==True:
+
+  int_lst.append(i)
+  
+length = len(int_lst)
+
+max_value = 0
+
+for i in range(0,length):
+    
+    if(int(max_value) < int(int_lst[i])):
+        
+        max_value = int_lst[i]
+
+print(max_value)
