@@ -1,0 +1,40 @@
+you are given a string made up of parenthesis only.Your task is to check whether parenthesis are balanced or not.If they are balanced print 1 else print 0
+
+Input Description:
+You are given a string ‘s’
+
+Output Description:
+Print 1 for balanced and 0 for imbalanced
+
+Sample Input :
+{({})}
+Sample Output :
+1
+
+# Function to check if the parentheses in a string are balanced
+def check(s):
+    b = []
+    for c in s:
+        if c == '(' or c=='{':
+            b.append(c)
+        elif c == ')' or c == '}':
+            if len(b) == 0:
+                return 0
+            else:
+                p = b[-1]
+                if p == '(' or p =='{':
+                    b.pop()
+                else:
+                    return 0
+    if len(b) == 0:
+        return 1
+    else:
+        return 0
+ 
+ 
+s = input()
+
+if check(s) == 0:
+    print("0")
+else:
+    print("1")
