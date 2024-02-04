@@ -1,0 +1,16 @@
+You are given some words all in lower case letters your task is to print them in sorted order.
+
+Input Description:
+You are given a string ‘s’
+
+Output Description:
+Print the string in sorted order
+
+Sample Input :
+virat kohli
+Sample Output :
+kohli virat
+
+s=input().split()
+s.sort()
+print(" ".join(s))
