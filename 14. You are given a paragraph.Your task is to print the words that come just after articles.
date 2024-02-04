@@ -1,0 +1,26 @@
+You are given a paragraph.Your task is to print the words that come just after articles.
+
+Input Description:
+You are given a string ‘s’
+
+Output Description:
+print the words that come just after articles and -1 if there are no articles
+
+Sample Input :
+The sun rises in the east
+
+Sample Output :
+sun east
+
+s = input().split()
+articles = ('a','an','the','A','An','The', 'AN', 'THE')
+l = []
+for i in range(len(s)-1):
+    if s[i] in articles:
+        l.append(s[i+1])          
+    else:
+        pass
+if len(l)==0:
+    print("-1")
+else:
+    print(' '.join(l))
