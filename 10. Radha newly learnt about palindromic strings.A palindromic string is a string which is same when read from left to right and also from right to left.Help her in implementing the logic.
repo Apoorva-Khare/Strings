@@ -1,0 +1,45 @@
+ Radha newly learnt about palindromic strings.A palindromic string is a string which is same when read from left to right and also from right to left.Help her in implementing the logic.
+
+ 
+
+Input Description:
+You are given a String ‘s’
+
+Output Description:
+Print 1 if String is palindrome or 0 if not
+
+Sample Input :
+NITIN
+Sample Output :
+1
+
+def checkPalindrome(s):
+    # Reversing a string
+    x = s[::-1]
+    # check if reversed string is equal 
+    # to given string
+    if(x == s):
+        return True
+    else:
+        return False
+         
+# Function to find a palindromic string B
+# such that given String A is a subsequence of B
+def findStringB(A):
+     
+    # Reversing the string A
+    B = A[::-1]
+     
+    B = B + A
+     
+    # If the string A is already a palindrome
+    # return A
+    if(checkPalindrome(A)):
+        return 1
+       
+    # else return B    
+    return 0
+ 
+# Driver Code
+A =input()
+print(findStringB(A))
