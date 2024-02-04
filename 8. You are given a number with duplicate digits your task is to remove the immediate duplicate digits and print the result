@@ -1,0 +1,57 @@
+You are given a number with duplicate digits your task is to remove the immediate duplicate digits and print the result
+
+Input Description:
+You are given a long string of digits
+
+Output Description:
+Print the desired result print -1 if result length is 0
+
+Sample Input :
+1331
+Sample Output :
+11
+
+num=int(input())
+
+num2=num/10
+
+roundnum2=int(num2)
+
+stnum=str(num)
+
+lenstnum=len(stnum)
+
+stnum2=str(roundnum2)
+
+lenstnum2=len(stnum2)
+
+list1=[]
+
+for i in range (1,lenstnum):
+
+    for j in range(1,i):
+
+        if i !=j:
+
+            list1.append(stnum[i])
+
+            list2=''.join(list1)
+
+            lenlist2=len(list2)
+
+            list3=[]
+
+            for m in range (1, lenlist2):
+                list3.append(list2[m])
+
+                list4=''.join(list3)
+
+                lenlist4=len(list4)
+
+if lenlist4!=2:
+
+    print(stnum)
+
+else:
+
+    print(list4)
